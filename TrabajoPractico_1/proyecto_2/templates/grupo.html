@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block titulo %}Grupo{% endblock %}
+{% block content %}
+  <h1>Equipos del grupo</h1>
+  {% if equipos %}
+    <ul>
+      {% for equipo in equipos %}
+        <li>{{ equipo.nombre }}</li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Todavía no hay equipos cargados.</p>
+  {% endif %}
+{% endblock %}

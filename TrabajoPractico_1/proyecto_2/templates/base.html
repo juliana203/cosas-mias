@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>{% block titulo %}Torneo{% endblock %}</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+    nav a { margin-right: 1rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ccc; padding: 0.5rem; text-align: left; }
+    input, select { padding: 0.4rem; margin-bottom: 0.6rem; display: block; width: 100%; }
+    button { padding: 0.5rem 1rem; }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="{{ url_for('ranking') }}">Ranking</a>
+    <a href="{{ url_for('grupo') }}">Grupo</a>
+    <a href="{{ url_for('resultado_nuevo') }}">Cargar resultado</a>
+  </nav>
+  <hr>
+  {% block content %}{% endblock %}
+</body>
+</html>

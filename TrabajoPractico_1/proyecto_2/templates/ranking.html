@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Ranking{% endblock %}
+{% block content %}
+  <h1>Ranking general</h1>
+  {% if filas %}
+    <table>
+      <tr><th>#</th><th>Equipo</th><th>Puntos totales</th></tr>
+      {% for equipo_nombre, total in filas %}
+        <tr><td>{{ loop.index }}</td><td>{{ equipo_nombre }}</td><td>{{ total }}</td></tr>
+      {% endfor %}
+    </table>
+  {% else %}
+    <p>Todavía no hay resultados cargados.</p>
+  {% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+{% block titulo %}Cargar resultado{% endblock %}
+{% block content %}
+  <h1>Cargar resultado</h1>
+  <form method="post">
+    <label>Equipo (si no existe, se crea solo)
+      <input type="text" name="equipo" list="equipos-existentes" required>
+      <datalist id="equipos-existentes">
+        {% for equipo in equipos %}
+          <option value="{{ equipo.nombre }}">
+        {% endfor %}
+      </datalist>
+    </label>
+    <label>Disciplina
+      <input type="text" name="disciplina" required>
+    </label>
+    <label>Puntos
+      <input type="number" name="puntos" required>
+    </label>
+    <button type="submit">Guardar</button>
+  </form>
+{% endblock %}
