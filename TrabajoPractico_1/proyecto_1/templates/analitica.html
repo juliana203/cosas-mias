@@ -1,0 +1,33 @@
+{% extends "base.html" %}
+{% block titulo %}Analítica{% endblock %}
+{% block content %}
+  <h1>Analítica de reclamos</h1>
+
+  <div class="stats">
+    <div><strong>Total</strong><br>{{ stats.total }}</div>
+    <div><strong>Pendientes</strong><br>{{ "%.1f"|format(stats.get('pendientes', 0)) }}%</div>
+    <div><strong>En proceso</strong><br>{{ "%.1f"|format(stats.get('en_proceso', 0)) }}%</div>
+    <div><strong>Resueltos</strong><br>{{ "%.1f"|format(stats.get('resueltos', 0)) }}%</div>
+    <div><strong>Inválidos</strong><br>{{ "%.1f"|format(stats.get('invalidos', 0)) }}%</div>
+    <div><strong>Mediana días resolución</strong><br>{{ "%.1f"|format(stats_mediana) }}</div>
+  </div>
+
+  {% if grafico_tor %}
+    <h2>Distribución de reclamos por estado</h2>
+    <img src="{{ grafico_tor }}" alt="Gráfico de torta de estados de reclamos">
+
+    <h2>Tiempo de resolución</h2>
+    <img src="{{ grafico_tie }}" alt="Gráfico de mediana de tiempo de resolución">
+
+    <h2>Palabras más frecuentes</h2>
+    <img src="{{ grafico_pf }}" alt="Gráfico de palabras frecuentes">
+
+    <h2>Descargar reporte</h2>
+    <p class="acciones-reclamo">
+      <a href="{{ url_for('analitica_reporte', tipo='html') }}" target="_blank">Ver como HTML</a>
+      <a href="{{ url_for('analitica_reporte', tipo='pdf') }}">Descargar PDF</a>
+    </p>
+  {% else %}
+    <p>Todavía no hay reclamos para generar estadísticas.</p>
+  {% endif %}
+{% endblock %}

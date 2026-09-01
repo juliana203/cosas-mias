@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block titulo %}Derivar reclamo{% endblock %}
+{% block content %}
+  <h1>Derivar reclamo #{{ reclamo.id_reclamo }}</h1>
+  <p class="contenido-reclamo">{{ reclamo.contenido }}</p>
+  <p class="meta-reclamo">
+    <span class="etiqueta">Departamento actual: {{ reclamo.departamento }}</span>
+  </p>
+
+  <form method="post" class="formulario">
+    {{ form.hidden_tag() }}
+    <label>{{ form.departamento.label }}
+      {{ form.departamento() }}
+    </label>
+    {{ form.submit() }}
+  </form>
+{% endblock %}

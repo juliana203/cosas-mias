@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% block titulo %}Panel de reclamos{% endblock %}
+{% block content %}
+  <h1>Panel de reclamos</h1>
+  {% if reclamos %}
+    <ul class="lista-reclamos">
+      {% for reclamo in reclamos %}
+        <li class="tarjeta-reclamo">
+          <p class="id-reclamo">Reclamo #{{ reclamo.id_reclamo }}</p>
+          <p class="contenido-reclamo">{{ reclamo.contenido }}</p>
+          <p class="meta-reclamo">
+            <span class="etiqueta">{{ reclamo.departamento }}</span>
+            <span class="estado estado-{{ reclamo.estado|estado_slug }}">{{ reclamo.estado }}</span>
+            <span>{{ reclamo.timestamp.strftime('%d/%m/%Y %H:%M') }}</span>
+          </p>
+          <p class="meta-reclamo">
+            <span>Creado por usuario #{{ reclamo.usuario_creador.id_bd }} ({{ reclamo.usuario_creador.nombre_usuario }})</span>
+          </p>
+          <p class="meta-reclamo">
+            {% if reclamo.adherentes %}
+              <span>Adheridos:
+                {% for adherente in reclamo.adherentes %}
+                  #{{ adherente.id_bd }} ({{ adherente.nombre_usuario }}){{ ", " if not loop.last }}
+                {% endfor %}
+              </span>
+            {% else %}
+              <span>Sin adherentes</span>
+            {% endif %}
+          </p>
+          <div class="acciones-reclamo">
+            <a href="{{ url_for('reclamo_estado', id_reclamo=reclamo.id_reclamo) }}">Cambiar estado</a>
+            {% if gestor_login.usuario_actual.rol == "secretario_tecnico" %}
+              <a href="{{ url_for('reclamo_derivar', id_reclamo=reclamo.id_reclamo) }}">Derivar</a>
+            {% endif %}
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay reclamos para mostrar.</p>
+  {% endif %}
+{% endblock %}

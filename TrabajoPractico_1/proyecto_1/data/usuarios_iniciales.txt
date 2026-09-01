@@ -1,0 +1,13 @@
+# Usuarios finales iniciales (los que sí tienen alta pública normal).
+#
+# Formato: nombre;apellido;email;nombre_usuario;claustro;contrasena
+#   - claustro: "estudiante" | "docente" | "PAyS" (exacto, con mayúsculas así)
+#
+# Líneas vacías o que empiezan con # se ignoran.
+
+Juan;Perez;juan.perez@alu.fi.uner.edu.ar;jperez;estudiante;Estudiante123!
+Maria;Gonzalez;maria.gonzalez@alu.fi.uner.edu.ar;mgonzalez;estudiante;Estudiante123!
+Sofia;Ramirez;sofia.ramirez@alu.fi.uner.edu.ar;sramirez;estudiante;Estudiante123!
+Roberto;Sanchez;roberto.sanchez@fi.uner.edu.ar;rsanchez;docente;Docente123!
+Elena;Martinez;elena.martinez@fi.uner.edu.ar;emartinez;docente;Docente123!
+Diego;Lopez;diego.lopez@fi.uner.edu.ar;dlopez;PAyS;PAyS123!

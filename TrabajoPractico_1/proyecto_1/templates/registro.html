@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Registrarme{% endblock %}
+{% block content %}
+  <h1>Crear cuenta</h1>
+  <form method="post" class="formulario">
+    {{ form.hidden_tag() }}
+    <label>{{ form.nombre.label }}{{ form.nombre() }}</label>
+    <label>{{ form.apellido.label }}{{ form.apellido() }}</label>
+    <label>{{ form.email.label }}{{ form.email() }}</label>
+    <label>{{ form.nombre_usuario.label }}{{ form.nombre_usuario() }}</label>
+    <label>{{ form.claustro.label }}{{ form.claustro() }}</label>
+    <label>{{ form.password.label }}{{ form.password() }}</label>
+    <label>{{ form.confirmacion.label }}{{ form.confirmacion() }}</label>
+    {{ form.submit() }}
+  </form>
+{% endblock %}

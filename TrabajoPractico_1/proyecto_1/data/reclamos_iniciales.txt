@@ -1,0 +1,19 @@
+# Reclamos iniciales de ejemplo.
+#
+# Formato: nombre_usuario_creador;contenido
+#   - nombre_usuario_creador debe existir en usuarios_iniciales.txt
+#     (se carga ANTES que este archivo, ver main.py)
+#   - El departamento NO se especifica acá: se asigna solo, con el
+#     clasificador automático, igual que si lo cargara un usuario real.
+#   - El contenido puede tener ";" sin problema (sólo se corta en el
+#     primer ";" de la línea).
+#
+# Líneas vacías o que empiezan con # se ignoran.
+
+jperez;El proyector del aula 3 no enciende y hay un cable pelado colgando
+mgonzalez;La luz del aula 2 esta quemada hace una semana
+sramirez;El aire acondicionado del aula 1 no enfria nada
+rsanchez;No puedo inscribirme al final de programacion avanzada, el sistema tira error
+emartinez;El pizarron del aula 4 esta roto y no se puede escribir bien
+dlopez;El bano de la planta baja esta inundado desde ayer
+jperez;La impresora de la biblioteca no imprime los trabajos

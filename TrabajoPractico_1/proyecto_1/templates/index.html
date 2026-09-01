@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block titulo %}Inicio — Gestión de Reclamos{% endblock %}
+{% block content %}
+  <h1>Sistema de Gestión de Reclamos</h1>
+  <p>Facultad de Ingeniería — Universidad Nacional de Entre Ríos.</p>
+  <p>
+    <a href="{{ url_for('login') }}">Iniciar sesión</a> o
+    <a href="{{ url_for('registro') }}">registrate</a> para reportar un reclamo.
+  </p>
+{% endblock %}

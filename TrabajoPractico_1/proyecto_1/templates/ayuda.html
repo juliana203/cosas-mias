@@ -1,0 +1,36 @@
+{% extends "base.html" %}
+{% block titulo %}Ayuda{% endblock %}
+{% block content %}
+  <h1>Ayuda</h1>
+  <p>Guía rápida para usar tu panel de reclamos.</p>
+
+  <h2>Panel</h2>
+  <p>
+    Ahí ves los reclamos {{ "de tu departamento" if current_user.rol == "jefe_departamento" else "de todos los departamentos" }}.
+    Cada tarjeta muestra el número de reclamo, quién lo creó, quiénes están adheridos,
+    el departamento, el estado actual y la fecha.
+  </p>
+
+  <h2>Cambiar estado</h2>
+  <p>
+    Desde "Cambiar estado" podés mover un reclamo entre
+    <strong>pendiente</strong>, <strong>en proceso</strong>, <strong>resuelto</strong> e
+    <strong>inválido</strong>. Al pasar un reclamo a <strong>en proceso</strong> es
+    obligatorio indicar un tiempo estimado de resolución, entre 1 y 15 días.
+  </p>
+
+  {% if current_user.rol == "secretario_tecnico" %}
+    <h2>Derivar</h2>
+    <p>
+      Como secretaría técnica, además podés "Derivar" un reclamo a otro departamento
+      si el clasificador automático se equivocó de destino.
+    </p>
+  {% endif %}
+
+  <h2>Analítica</h2>
+  <p>
+    Mostrá estadísticas de tus reclamos: porcentaje por estado, mediana del tiempo de
+    resolución, y las palabras más frecuentes en los contenidos. Desde ahí también podés
+    descargar un reporte en HTML o PDF.
+  </p>
+{% endblock %}

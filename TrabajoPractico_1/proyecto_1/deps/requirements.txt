@@ -1,0 +1,20 @@
+Flask
+Flask-Session
+Flask-Login
+Flask-WTF
+email-validator
+SQLAlchemy
+Werkzeug
+matplotlib
+fpdf2
+coverage
+gunicorn
+psycopg2-binary
+ 
+# Dependencias del clasificador.
+# Pineadas porque el .pkl se generó con estas versiones exactas.
+scikit-learn==1.7.2
+spacy==3.8.7
+preshed==3.0.10
+cymem==2.0.11
+ 

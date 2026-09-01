@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{% block titulo %}Sistema de Gestión de Reclamos{% endblock %}</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/estilos.css') }}">
+</head>
+<body>
+  <header class="barra-navegacion">
+    <a class="logo" href="{{ url_for('index') }}">Gestión de Reclamos — FI UNER</a>
+    <nav>
+      {% if current_user.is_authenticated %}
+        <span class="usuario-actual">{{ current_user.nombre }} ({{ current_user.rol }})</span>
+        {% if current_user.rol == "usuario_final" %}
+          <a href="{{ url_for('reclamo_nuevo') }}">Nuevo reclamo</a>
+          <a href="{{ url_for('reclamos_pendientes') }}">Pendientes</a>
+          <a href="{{ url_for('reclamos_usu') }}">Mis reclamos</a>
+        {% elif current_user.rol in ["jefe_departamento", "secretario_tecnico"] %}
+          <a href="{{ url_for('panel_departamento') }}">Panel</a>
+          <a href="{{ url_for('analitica_vista') }}">Analítica</a>
+          <a href="{{ url_for('ayuda') }}">Ayuda</a>
+        {% endif %}
+        <a href="{{ url_for('logout') }}">Cerrar sesión</a>
+      {% else %}
+        <a href="{{ url_for('login') }}">Iniciar sesión</a>
+        <a href="{{ url_for('registro') }}">Registrarme</a>
+      {% endif %}
+    </nav>
+  </header>
+
+  <main class="contenido">
+    {% with mensajes = get_flashed_messages(with_categories=true) %}
+      {% if mensajes %}
+        <ul class="mensajes-flash">
+          {% for categoria, mensaje in mensajes %}
+            <li class="mensaje mensaje-{{ categoria }}">{{ mensaje }}</li>
+          {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+
+    {% block content %}{% endblock %}
+  </main>
+</body>
+</html>
