@@ -1,4 +1,6 @@
 import pickle
+import pathlib
+pathlib.WindowsPath = pathlib.PosixPath
 
 class ClasificadorReclamo:
     def __init__(self):
