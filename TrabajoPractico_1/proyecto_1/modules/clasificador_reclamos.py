@@ -1,6 +1,12 @@
 import pickle
 import pathlib
+# Parche específico para el sistema interno de Python 3.13
+sys.modules["pathlib._local"] = pathlib
 pathlib.WindowsPath = pathlib.PosixPath
+
+# Por si el archivo pickle busca la ruta directamente en el submódulo
+if hasattr(pathlib, '_local'):
+    pathlib._local.WindowsPath = pathlib._local.PosixPath
 
 class ClasificadorReclamo:
     def __init__(self):
