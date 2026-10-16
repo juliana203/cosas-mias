@@ -1,0 +1,122 @@
+CLUSTAL 2.1 multiple sequence alignment
+
+
+1JJI_1|Chains        MLDMP----------------------------------IDP------------------
+lipase               M---P----------------------------------LDK------------------
+triacylglycerol      MPILPVPALNAL--------------------LTKTIKTIKTGAAKNAHQHH--------
+DQ118648.1           M----------------------------------------PS-----------------
+probable             MNA-PARS-------------------------RADTRVIDPSEGR--------------
+1JKM_1|Chains        YTP-PG-------------------------------RLGDES-----------------
+Seq                  M------------------------------------GVFDYKNL---------------
+Pseudomonas          M-----------------------------------------------------------
+                                                                                 
+
+1JJI_1|Chains        ---------VYYQLAEYFDSL--PKFDQF------SSAREY-------------------
+lipase               ---------QIAAVLQQFSELPAPDFSQLD-------AAQY-------------------
+triacylglycerol      ---------VLHHTLKGLDNLPAPVLERINRRLKASTAEQYPLAD------AHLRL-ILA
+DQ118648.1           ---------QRARLTNEFLRLTTKSMWKPD--LDLGSIRAH-------------------
+probable             ---------WKRRLLNLLLRLSVKSRHGMG--IDIQLRKQF-------------------
+1JKM_1|Chains        ---------SGPRTDPRFSPAMVEALATFG--LDAVAAAPP-------------------
+Seq                  ---------GTEGSKALFADAMAITLYTYH-NLDNGFAVGYQHNGLG----LGLPATLVG
+Pseudomonas          ----------DDSVNTRYPILLVHGLFGF----DRIGSHHYFH-----------------
+                                                                                 
+
+1JJI_1|Chains        ---REAINR----------------------------IYEE-----RNRQLSQHE-----
+lipase               ---RQFCDN-------------------------------------LLPAIPGD------
+triacylglycerol      ISN----------------------------------KLKRPLAIDKLPKLRQKFGTDAV
+DQ118648.1           --MARMDARLG------------------------------------RRALP--------
+probable             ---AQLERQG--------------------------------------QALPT-------
+1JKM_1|Chains        ---VSASDD----------------------------------LPTVLAAVGASHDGFQA
+Seq                  ALLGSTDSQGV------------------------------------IPGIPWNPDSEKA
+Pseudomonas          ---------------------------------------------GIKQALNECGA----
+                                                                       :         
+
+1JJI_1|Chains        ---------------------------RVERVEDRTIK-GRNGDIRVRVYQQKP------
+lipase               ---------------------------PMIEVRNLRVA-AAAGELDARLYRP--------
+triacylglycerol      SLQAPSVWQQ--------NADASGSTENAVSWQDKTIANADGGDMTVRCYQKSTQNSE--
+DQ118648.1           -----------------------------VAREEIRIAGVPASWIGEKALEA--------
+probable             ----------------------------DVLRTRVSCNGTPAHWLSPASCRQ--------
+1JKM_1|Chains        --VYDS------------IALDLPTDRDDVETSTETILGVDGNEITLHVFRPA-------
+Seq                  ALEA-----VQQAGWTPIRASTLGYT--GKVDARGTFFGEKAGYTTAQVEVL--------
+Pseudomonas          ------------------------------SVFVPIISAANDNEARGDQL----------
+                                                                                 
+
+1JJI_1|Chains        ----DSPVLVYYHGGGFVICSI-------ESHDALCRRIARLSNSTVVSVDYRLA-----
+lipase               LEEDNLPLLVFFHGGGFVMGNL-------DTHDNLCRSLASQTEAVVVSVAYRLA-----
+triacylglycerol      RKSTDEAAMLFFHGGGFCIGDI-------DTHHEFCHTVCAQTGWAVVSVDYRMA-----
+DQ118648.1           -----AGTILYIHGGAWCLHAP-------AAYARLATSLSAATGMRVLLIDYRLA-----
+probable             -----ERVLLYIHGGAFVAYTP-------QIYAAMVANWCRPLKARALMVDYSLA-----
+1JKM_1|Chains        GVEGVLPGLVYTHGGGMTILTTD-----NRVHRRWCTDLAAA-GSVVVMVDFRNAWTAE-
+Seq                  GKYDDAGKLLEI-GIGFRGTSGPRETLVSDSIGDLVSDLLAALGPK----DYANNY----
+Pseudomonas          --LKQIHNLRRQVGAQRVNLIG-------HSQGALTARYVAA------------------
+                             :    *                                              
+
+1JJI_1|Chains        ------------------PEHKFPAAVYDCYDATKWVAENAEELRIDPSKIFVG------
+lipase               ------------------PENHFPAAPLDCYAATCWLVEHAAELGVDGRRLALA------
+triacylglycerol      ------------------PEYPAPTALKDCLAAYAWLAEHSQSLGASPSRIVL-------
+DQ118648.1           ------------------PEHRFPAGSDDCLGVYRWLIEQ----GYHERPLVVA------
+probable             ------------------PECPFPTALDQAHATYRWLLEQ----GTRPEHIVIA------
+1JKM_1|Chains        ------------------GHHPFPSGVEDCLAAVLWVDEHRESLGLSG--VVVQ------
+Seq                  ------------------AGEAFGGLLKN-------VADYASAHGLSGHDVVVS------
+Pseudomonas          ------------------IAPELIASVTSVSG---------------PNH----------
+                                                 .                               
+
+1JJI_1|Chains        -----------------------GDSAGGNLAAAVSI--------MARDSGEDFIKH---
+lipase               -----------------------GDSAGGNLALAVSR--------LAAQRQGPKISY---
+triacylglycerol      -----------------------GDSAGGCLAALVAQQVIKPIDALWQDNNQAPAADKKV
+DQ118648.1           -----------------------GDSAGGNLTLVTLQ--------RARDAGLPMPCC---
+probable             -----------------------GDSAGGNLALALMQ--------RLRDEGAQLPSC---
+1JKM_1|Chains        -----------------------GESGGGNLAIATTL--------LAKRRGRLDAIDG--
+Seq                  -----------------------GHSLGG-LAVNSMAD-------LSSSKWAGFYQD---
+Pseudomonas          -----------------------GSELADRLRLAFVP------GRLGETVAAALTTS---
+                                            * . .. *                             
+
+1JJI_1|Chains        ----------------QILIYPVVNFVAPTPSLLEF-----------GEGLW--ILDQKI
+lipase               ----------------QCLFYPVTDARCDSQSYEEF-----------AEGYF---LTGAM
+triacylglycerol      NDTFKNSLADLPRPLAQLPLYPVTDYEAEYPSWELY-----------GEGLL---LDHND
+DQ118648.1           ----------------AVPISPSTDMTMSGPSGQYN---------AEADSMF----SLAA
+probable             ----------------AVLLSPFLDFTLSGASALGN---------ARHDPIF----TLPF
+1JKM_1|Chains        -------------------VYASIPYISGGYAWDHERRLTELPSLVENDGYF---IENGG
+Seq                  ---------------ANYLAYASPTQSAGDKVLNIG---------YENDPVFR-ALDGSS
+Pseudomonas          -------------------FSAFLSALSGHPRLPQN-----------ALNALN-ALTTDG
+                                          .                                      
+
+1JJI_1|Chains        MSWFSEQYFSREE-DKFNPLAS-----VIFAD---------LENLP------PALIITAE
+lipase               MYWFWQQYLQDTG-QGDDPLAS-----PLRAET--------LADLP------PTTLITAE
+triacylglycerol      AEVFNSAYTQHSGLPQSHPLIS-----VMHGD---------NTQLC------PSYIVVAE
+DQ118648.1           ADIFPGLYCPGE--DLTNPMIS-----PLFGN---------WWGLP------PLLFHAGS
+probable             AIAIRGFYASAE--KHASPEVS-----PLFGS---------FAGLP------PLLLQVGS
+1JKM_1|Chains        MALLVRAYDPTGE-HAEDPIAW-----PYFASED------ELRGLP------PFVVAVNE
+Seq                  FNWSSLGVHDKPHESTTDNIVS--FN-DHYASTLWNVLPFSITNLPTWISHLPTGYGDGM
+Pseudomonas          VAAFNRQYPQGLP-DRWGGMGPAQVNAVHYYS---------WSGIIK---GSRLAESLNL
+                                                    .            :               
+
+1JJI_1|Chains        YDPL---------RDEGEVFGQML--RRAGVEASIVRYRGVLHGFINY------------
+lipase               FDPL---------RDEGEAFALRL--QQAGVSVRVQRCEGMIHGFISM------------
+triacylglycerol      LDIL---------RDEGLAYAELL--QKEGVQVQTYTVLGAPHGFINL------------
+DQ118648.1           TELL---------LDDSVRAQDRA--RQAGVEAYIQVWLNLPHVFHVF------------
+probable             TEML---------LDDSVRAAASA--AAAGVPVRLEIWQQMPHVFQMI------------
+1JKM_1|Chains        LDPL---------RDEGIAFARRL--ARAGVDVAARVNIGLVHGADVIF-----------
+Seq                  TRILESGFYGQMSRDSTIIVANLSDPARATTWVQDLNRNAEPHKGDTYIIGSDGNDLIQG
+Pseudomonas          LDPL---------HNALRVFDSFF--TRETRENDGMVGRFSSHLGQVI------------
+                        *          :                           *                 
+
+1JJI_1|Chains        ---YPVLK----AARDAINQIAALLVF---------------------------------
+lipase               ---APFVE----RAAHALSDAAA-------------------------------------
+triacylglycerol      ---MSVHQGLGNQTTYIINEFACLVQNLLT---------------------------SEG
+DQ118648.1           ---HWLPESQ--QGIAAIAHFIAAMSKTSP------RTVPYR---------IPGLPQ--V
+probable             ---AALPQAL--QAQRHILDFVN-------------------------------------
+1JKM_1|Chains        --RHWLPAALE-STVRDVAGFAA-------------------------------------
+Seq                  GKGADFIEGG--KGNDTIRDSSGHNTFLFSGPFGQDRIIGYQATDKLVFRDVDGSADY-R
+Pseudomonas          --RSDYPL----DHLDTINHMARGSRRRIN------PVELY------------------I
+                                      :                                          
+
+1JJI_1|Chains        D----------------------------------
+lipase               DLRRALN----------------------------
+triacylglycerol      DKPNLRA----------------------------
+DQ118648.1           ERATAEG-------------------LT------A
+probable             DHTNWDG----------------------------
+1JKM_1|Chains        DRARLR-----------------------------
+Seq                  DHAKVVGGDTVISFGADSVTLVGVVGLSGEGIVIG
+Pseudomonas          EHAKRLKE----------------AGL--------
+                     :                                  
