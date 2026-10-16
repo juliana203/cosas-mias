@@ -1,0 +1,9 @@
+Paso 2, minimizacion
+&cntrl
+	imin=1,
+	maxcyc=1000,
+	ncyc=1000,
+	ntb=1,
+	ntr=0,
+	cut=9.0
+&end
