@@ -1,0 +1,20 @@
+REMARK   4 XXXX COMPLIES WITH FORMAT V. 2.0
+ATOM      7  HN  UNK N   1      85.309  73.232  31.032  1.00  0.00      C14H H  
+ATOM     18  HN  UNK N   1      85.452  73.453  32.804  1.00  0.00      C14H H  
+TER      19      UNK N   1 
+HETATM    1  C   UNK N   1      84.719  75.202  30.979  0.00  0.00      C14H C  
+HETATM    2  C   UNK N   1      84.151  76.216  30.190  0.00  0.00      C14H C  
+HETATM    3  C   UNK N   1      83.775  75.937  28.874  0.00  0.00      C14H C  
+HETATM    4  C   UNK N   1      83.969  74.649  28.356  0.00  0.00      C14H C  
+HETATM    5  C   UNK N   1      84.543  73.660  29.182  0.00  0.00      C14H C  
+HETATM    6  N   UNK N   1      84.895  73.961  30.450  0.00  0.00      C14H N  
+HETATM    8  C   UNK N   1      84.749  72.368  28.695  0.00  0.00      C14H C  
+HETATM    9  C   UNK N   1      84.387  72.053  27.386  0.00  0.00      C14H C  
+HETATM   10  C   UNK N   1      83.817  73.028  26.559  0.00  0.00      C14H C  
+HETATM   11  C   UNK N   1      83.607  74.327  27.041  0.00  0.00      C14H C  
+HETATM   12  C   UNK N   1      85.131  75.444  32.373  0.00  0.00      C14H C  
+HETATM   13  C   UNK N   1      85.168  76.754  32.881  0.00  0.00      C14H C  
+HETATM   14  C   UNK N   1      85.559  76.969  34.198  0.00  0.00      C14H C  
+HETATM   15  C   UNK N   1      85.911  75.885  35.000  0.00  0.00      C14H C  
+HETATM   16  C   UNK N   1      85.865  74.594  34.467  0.00  0.00      C14H C  
+HETATM   17  N   UNK N   1      85.481  74.401  33.179  0.00  0.00      C14H N  
