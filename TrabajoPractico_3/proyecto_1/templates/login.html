@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block titulo %}Iniciar sesión{% endblock %}
+{% block content %}
+  <h1>Iniciar sesión</h1>
+  <form method="post" class="formulario">
+    {{ form.hidden_tag() }}
+    <label>{{ form.nombre_usuario.label }}
+      {{ form.nombre_usuario(autofocus=true) }}
+    </label>
+    <label>{{ form.password.label }}
+      {{ form.password() }}
+    </label>
+    {{ form.submit() }}
+  </form>
+{% endblock %}

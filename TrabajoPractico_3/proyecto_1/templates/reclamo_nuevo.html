@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block titulo %}Nuevo reclamo{% endblock %}
+{% block content %}
+  <h1>Reportar un reclamo</h1>
+  <form method="post" class="formulario">
+    {{ form.hidden_tag() }}
+    <label>{{ form.contenido.label }}
+      {{ form.contenido(placeholder="Contá qué pasó, con el mayor detalle posible (ej. aula, edificio, qué falla)...") }}
+    </label>
+    {{ form.submit() }}
+  </form>
+  <p class="ayuda">
+    El reclamo se clasifica automáticamente según el contenido. Si ya existe
+    un reclamo similar activo, vas a poder adherirte a ese en lugar de crear uno nuevo.
+  </p>
+{% endblock %}

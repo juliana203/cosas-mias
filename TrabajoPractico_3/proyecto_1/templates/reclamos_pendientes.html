@@ -1,0 +1,44 @@
+{% extends "base.html" %}
+{% block titulo %}Reclamos pendientes{% endblock %}
+{% block content %}
+  <h1>Reclamos pendientes</h1>
+
+  <form method="get" class="formulario-filtro">
+    <label>Filtrar por departamento
+      <select name="departamento" onchange="this.form.submit()">
+        <option value="" {% if not departamento_filtro %}selected{% endif %}>Todos los departamentos</option>
+        {% for depto in departamentos %}
+          <option value="{{ depto.nombre }}" {% if departamento_filtro == depto.nombre %}selected{% endif %}>
+            {{ depto.nombre }}
+          </option>
+        {% endfor %}
+      </select>
+    </label>
+  </form>
+
+  {% if reclamos %}
+    <ul class="lista-reclamos">
+      {% for reclamo in reclamos %}
+        <li class="tarjeta-reclamo">
+          <p class="id-reclamo">Reclamo #{{ reclamo.id_reclamo }}</p>
+          <p class="contenido-reclamo">{{ reclamo.contenido }}</p>
+          <p class="meta-reclamo">
+            <span class="etiqueta">{{ reclamo.departamento }}</span>
+            <span class="estado estado-{{ reclamo.estado|estado_slug }}">{{ reclamo.estado }}</span>
+            <span>{{ reclamo.timestamp.strftime('%d/%m/%Y %H:%M') }}</span>
+            <span>{{ reclamo.adherentes|length }} adherente(s)</span>
+          </p>
+          {% if reclamo.usuario_creador.id_bd != gestor_login.usuario_actual.entidad.id_bd %}
+            <form method="post" action="{{ url_for('reclamo_adherirse', id_reclamo=reclamo.id_reclamo) }}">
+              <button type="submit">Adherirme</button>
+            </form>
+          {% else %}
+            <p class="nota">Creado por vos</p>
+          {% endif %}
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>No hay reclamos pendientes por el momento.</p>
+  {% endif %}
+{% endblock %}

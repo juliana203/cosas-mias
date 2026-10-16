@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% block titulo %}Cambiar estado del reclamo{% endblock %}
+{% block content %}
+  <h1>Cambiar estado del reclamo #{{ reclamo.id_reclamo }}</h1>
+  <p class="contenido-reclamo">{{ reclamo.contenido }}</p>
+  <p class="meta-reclamo">
+    <span class="etiqueta">{{ reclamo.departamento }}</span>
+    <span class="estado estado-{{ reclamo.estado|estado_slug }}">{{ reclamo.estado }}</span>
+  </p>
+
+  <form method="post" class="formulario">
+    {{ form.hidden_tag() }}
+    <label>{{ form.estado.label }}
+      {{ form.estado() }}
+    </label>
+    <label>{{ form.tiempo_resolucion.label }}
+      {{ form.tiempo_resolucion() }}
+    </label>
+    {{ form.submit() }}
+  </form>
+{% endblock %}

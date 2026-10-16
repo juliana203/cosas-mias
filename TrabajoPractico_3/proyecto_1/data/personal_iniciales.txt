@@ -1,0 +1,10 @@
+# Personal del sistema (jefes de departamento y secretaría técnica).
+# Formato: rol;nombre;apellido;email;nombre_usuario;contrasena;departamento_asignado
+#   - rol: "jefe_departamento" o "secretario_tecnico"
+#   - departamento_asignado: sólo aplica a jefe_departamento. Debe ser EXACTAMENTE uno de los 3 nombres fijos del clasificador:
+#     "soporte informático" ; "secretaría técnica" ; "maestranza"
+#   - Para secretario_tecnico, dejar el último campo vacío (no tiene departamento asignado: ve y deriva reclamos de todos).
+
+jefe_departamento;Ana;Gomez;ana.gomez@fi.uner.edu.ar;agomez;Clave123!;soporte informático
+jefe_departamento;Carlos;Diaz;carlos.diaz@fi.uner.edu.ar;cdiaz;Clave123!;maestranza
+secretario_tecnico;Laura;Fernandez;laura.fernandez@fi.uner.edu.ar;lfernandez;Clave123!;

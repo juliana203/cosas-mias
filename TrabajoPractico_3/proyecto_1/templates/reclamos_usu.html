@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block titulo %}Mis reclamos{% endblock %}
+{% block content %}
+  <h1>Mis reclamos</h1>
+  {% if reclamos %}
+    <ul class="lista-reclamos">
+      {% for reclamo in reclamos %}
+        <li class="tarjeta-reclamo">
+          <p class="id-reclamo">Reclamo #{{ reclamo.id_reclamo }}</p>
+          <p class="contenido-reclamo">{{ reclamo.contenido }}</p>
+          <p class="meta-reclamo">
+            <span class="etiqueta">{{ reclamo.departamento }}</span>
+            <span class="estado estado-{{ reclamo.estado|estado_slug }}">{{ reclamo.estado }}</span>
+            <span>{{ reclamo.timestamp.strftime('%d/%m/%Y %H:%M') }}</span>
+          </p>
+          {% if reclamo.tiempo_resolucion_asignado %}
+            <p class="nota">Tiempo de resolución asignado: {{ reclamo.tiempo_resolucion_asignado }} día(s)</p>
+          {% endif %}
+          <p class="nota">{{ reclamo.adherentes|length }} adherente(s)</p>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    <p>Todavía no creaste ningún reclamo.</p>
+  {% endif %}
+{% endblock %}

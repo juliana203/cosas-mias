@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block titulo %}Reclamos similares{% endblock %}
+{% block content %}
+  <h1>Encontramos reclamos similares</h1>
+  <p>Antes de crear uno nuevo, fijate si alguno de estos ya es el tuyo — adherirte suma tu voz sin duplicar el reclamo.</p>
+
+  <ul class="lista-reclamos">
+    {% for reclamo in similares %}
+      <li class="tarjeta-reclamo">
+        <p class="id-reclamo">Reclamo #{{ reclamo.id_reclamo }}</p>
+        <p class="contenido-reclamo">{{ reclamo.contenido }}</p>
+        <p class="meta-reclamo">
+          <span class="etiqueta">{{ reclamo.departamento }}</span>
+          <span class="estado estado-{{ reclamo.estado|estado_slug }}">{{ reclamo.estado }}</span>
+          <span>{{ reclamo.adherentes|length }} adherente(s)</span>
+        </p>
+        <form method="post" action="{{ url_for('reclamo_confirmar_adhesion', id_reclamo=reclamo.id_reclamo) }}">
+          <button type="submit">Adherirme a este</button>
+        </form>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <form method="post" action="{{ url_for('reclamo_crear_de_todos_modos') }}">
+    <button type="submit" class="boton-secundario">Ninguno de estos, crear reclamo nuevo</button>
+  </form>
+{% endblock %}
