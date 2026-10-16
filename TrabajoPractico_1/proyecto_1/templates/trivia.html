@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/estilos.css">
+    <title>Trivia de películas</title>
+</head>
+<body>
+    <header>
+        <h1>Trivia de películas</h1>
+    </header>
+    <br><br><br>
+    <form action="/verificacion" method="post">
+        <div class="frase">
+            <p>{{ frase['frase'] }}</p>
+        </div>
+        <br>
+        <div class="opciones">
+            {% for opcion in frase['opciones'] %}
+                <input type="radio" id="{{ opcion }}" name="respuesta" value="{{ opcion }}"required>
+                <label for="{{ opcion }}">{{ opcion }}</label><br>
+            {% endfor %}
+        </div>
+        <br><br><br>
+        <div class="container">
+            <input type="submit" value="Enviar respuestas" class="btn" >
+            <br>
+        </div>   
+    </form>
+</body>
+</html>

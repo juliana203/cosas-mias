@@ -1,0 +1,160 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('../statics/fondo.jpg'); /* Ruta de la imagen de fondo */
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #333; /* Texto gris oscuro */
+    font-weight: 700;
+    
+}
+
+.container {
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+}
+
+.opciones {
+    margin-left: 80px;
+    margin-right: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #333;
+    border: 3px solid #ccc;
+    background-color: #cccccc60;
+    height: 60px;
+}
+
+.frase{
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    height: 40px;
+    display: block;
+    text-align: center;
+    border: 3px solid #ccc;
+    background-color: #cccccc60;
+}
+
+.column {
+    flex: 1;
+    padding: 20px;
+    border: 3px solid #ccc;
+    box-sizing: border-box;
+    background-color: #cccccc60;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 30px;
+    width: 300px;
+    height: 50px;
+    text-transform: capitalize;
+}
+
+/* Encabezado */
+header {
+    background-color: #6a0dad; /* Violeta oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+/* Contenido principal */
+main {
+    padding: 30px;
+    margin-top: 20px;
+}
+
+/* Formulario */
+form {
+    margin-bottom: 20px;
+    
+}
+
+label {
+    display: block;
+    text-align: center;
+    margin: auto;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="submit"] {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+input[type="submit"] {
+    background-color: #6a0dad; /* Violeta oscuro */
+    color: #fff; /* Texto blanco */
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #4b0869; /* Violeta más oscuro al pasar el ratón */
+}
+
+/* Pie de página */
+footer {
+    background-color: #ccc; /* Fondo gris */
+    color: #333; /* Texto gris oscuro */
+    text-align: center;
+    padding: 10px 0;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Estilos de la tabla */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+/* Estilos de las celdas de encabezado */
+th {
+    background-color: #6a0dad; /* Violeta oscuro */
+    color: #fff; /* Texto blanco */
+    padding: 10px;
+    text-align: left;
+}
+
+/* Estilos de las celdas de datos */
+td {
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+
+/* Estilos para resaltar filas alternas */
+tr:nth-child(even) {
+    background-color: #f2f2f2; /* Fondo gris claro para filas pares */
+}
+
+/* Estilos para los elementos de la lista */
+li {
+    padding: 10px 0; /* Espaciado vertical entre elementos */
+    border-bottom: 1px solid #ccc; /* Línea separadora entre elementos */
+    text-align: center;
+}
+
+/* Estilos para el último elemento de la lista */
+li:last-child {
+    border-bottom: none; /* Elimina la línea separadora del último elemento */
+}
+
+img{
+    padding: 20px;
+}

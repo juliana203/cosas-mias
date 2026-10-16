@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        /* Estilo para resaltar los valores de aw mayores a 0.90 */
+        .high-aw {
+            color: red; /* Cambia el color del texto a rojo */
+            font-weight: bold; /* Hace el texto en negrita */
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Resultados</h1>
+    <h3>Peso total del cajón: {{ peso_cajon }}</h3>
+    {% if ali_desconocido > 0 %}
+        <h3>Alimentos desconocidos: {{ ali_desconocido }}</h3>
+    {% endif %}
+    <h1>Actividad acuosa (aw):</h1>
+    <h3>La actividad mayor a 0.90 es considerada susceptible a la proliferación de microorganismos (estara escrita de color rojo).</h3>
+    <h2>Frutas:</h2>
+    <ul>
+        <li>Aw promedio de los kiwis: {% if aw_kiwi_p > 0.90 %}<span class="high-aw">{{ aw_kiwi_p }}</span>{% else %}{{ aw_kiwi_p }}{% endif %}</li>
+        <li>Aw promedio de las manzanas: {% if aw_manzana_p > 0.90 %}<span class="high-aw">{{ aw_manzana_p }}</span>{% else %}{{ aw_manzana_p }}{% endif %}</li>
+    </ul>
+    <h2>Verduras:</h2>
+    <ul>
+        <li>Aw promedio de las papas: {% if aw_papa_p > 0.90 %}<span class="high-aw">{{ aw_papa_p }}</span>{% else %}{{ aw_papa_p }}{% endif %}</li>
+        <li>Aw promedio de las zanahorias: {% if aw_zanahoria_p > 0.90 %}<span class="high-aw">{{ aw_zanahoria_p }}</span>{% else %}{{ aw_zanahoria_p }}{% endif %}</li>
+    </ul>
+    <h2>Promedios:</h2>
+    <p>AW promedio de frutas: {% if aw_fru_p > 0.90 %}<span class="high-aw">{{ aw_fru_p }}</span>{% else %}{{ aw_fru_p }}{% endif %}</p>
+    <p>AW promedio de verduras: {% if aw_verd_p > 0.90 %}<span class="high-aw">{{ aw_verd_p }}</span>{% else %}{{ aw_verd_p }}{% endif %}</p>
+    <p>AW promedio del cajon: {% if aw_total_p > 0.90 %}<span class="high-aw">{{ aw_total_p }}</span>{% else %}{{ aw_total_p }}{% endif %}</p>
+    
+    <form action="{{ url_for('inicio') }}">
+        <input type="submit" value="Ingresar otro cajon" class="btn"><br><br><br>
+    </form>
+</body>
+</html>

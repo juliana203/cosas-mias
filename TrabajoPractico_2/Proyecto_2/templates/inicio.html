@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Bienvenidos!!!</h1>
+    <h3>A continuacion se le pide que ingrese la cantidad de alimentos que tiene en su cajon para poder analizar la actividad acuosa de los mismos, tambien se le infomara el peso total del cajon</h3>
+    <form action="{{ url_for('resultados') }}" method="post">
+        <label for="n">Ingrese la cantidad de alimentos en el cajon:</label><br><br>
+        <input type="text" id= "n" name="n" required> <br><br>
+        <br><br>
+        <input type="submit" value="Analizar cajon" class="btn"><br><br><br> 
+    </form>
+</body>
+</html>

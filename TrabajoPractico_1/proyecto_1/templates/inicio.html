@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/estilos.css">
+    <title>Trivia de películas - Inicio</title>
+</head>
+<body>
+    <h1></h1>
+    <header>
+        <h1>Trivia de películas</h1>
+    </header>
+    <br><br><br>
+    <div class="column">
+        <h3>¡Bienvenidos a nuestra trivia de peliculas!, a continuacion por favor ingrese su nombre y el numero de frases que desee responder (esta limitado a minimo 3 y un maximo de 15), una vez iniciada la trivia se mostrara, una frase conrrespondiente a una pelicula junto con tres opciones de posibles respuestas, usted debera elegir entre esas opciones y enviar su respuesta apretando el boton, se le informara de forma inmediata si su respuesta fue correcta o no, de no serla se le dira cual era la respuesta correcta.</h3>
+        <h3>En el boton "Listado de peliculas" podra ver una lista con todas las posibles peliculas a aparecer en las opciones.</h3>
+        <h3>En el boton "Historial de juego" tendra una historial que cuente con nombre, fecha y hora de comienzo del juego, aciertos y desaciertos realizados por cada jugador que ha juegado la trivia.</h3>
+    </div>
+    <br><br>
+    <form action="{{ url_for('trivia') }}" method="post">
+        <div  class="container">
+            <div class="column">
+                <label for="nombre">Ingrese su nombre:</label><br><br>
+                <input type="text" id= "nombre" name="nombre" required> <br><br>
+            </div>
+            <div class="column">
+                <label for="num_frases" >Número de frases:</label><br><br>
+                <input type="number" id="num_frases" name="num_frases" min="3" max="15" required><br><br>
+            </div>
+        </div>
+        <br><br>
+        <div class="column">
+            <h3>Luego de terminar de responder todas las preguntas de la trivia se le mostrara una pantalla con su desempeño en el intento, junto con un boton para volver al inicio y uno con la opcion de visualizar unas graficas con los aciertos acumulados de todas las partidas y una porcentaje de aciertos y desaciertos.</h3>
+            <h3>Dentro de la pagina de las graficas se te permite descargar las graficas que estas observando, o volver al inicio desde alli.</h3> 
+        </div>
+        <br><br>
+        <div class="container">
+            <input type="submit" value="Comenzar trivia" class="btn"><br><br><br>
+        </div>   
+    </form>
+    <form action="{{ url_for('ver_peliculas') }}">
+        <div class="container">
+            <input type="submit" value="Listado de peliculas" class="btn"><br><br><br>
+        </div>
+    </form>
+    <form action="{{ url_for('ver_historial') }}">
+        <div class="container">
+            <input type="submit" value="Historial de juego" class="btn">
+        </div>
+    </form>
+    <br><br>
+    <footer>
+        <p>TP N° 1: Nuñez y Ramirez</p>
+    </footer>
+</body>
+</html>
+

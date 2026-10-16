@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/estilos.css">
+    <title>Trivia de películas - Resultados</title>
+</head>
+<body>
+    <header>
+        <h1>Resultados de la trivia</h1>
+    </header>
+    <h3>Respuestas correctas:</h3>
+    <ul>
+        {% for frase, res in resp_correctas_usu.items() %}
+            <li>
+                Frase: {{ frase }}<br>
+                Respuesta dada: {{ res }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Respuestas incorrectas:</h3>
+    <ul>
+        {% for frase, res in resp_incorrectas_usu.items() %}
+            <li>
+                Frase: {{ frase }}<br>
+                Respuesta dada: {{ res }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+    <h3>Correcion de respuestas incorrectas:</h3>
+    <ul>
+        {% for frase, res in resp_correctas.items() %}
+            <li>
+                Frase: {{ frase }}<br>
+                Respuesta correcta: {{ res }}<br>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <form action="{{ url_for('inicio') }}" method = 'get'>
+        <input type="submit" value="Volver al inicio" class="btn">
+    </form>
+    <br><br>
+    <form action="{{ url_for('guardar_historial') }}" method = 'get'>
+        <input type="submit" value="Ver graficas." class="btn">
+    </form>
+</body>
+</html>

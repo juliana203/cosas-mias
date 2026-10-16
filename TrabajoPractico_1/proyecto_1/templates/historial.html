@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/estilos.css">
+    <title>Historial</title>
+</head>
+<body>
+    <header>
+        <h1>Historial de Jugadores</h1>    
+    </header>
+    <br><br><br>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre de Usuario</th>
+                <th>Tiempo de Juego (segundos)</th>
+                <th>Aciertos</th>
+                <th>Desaciertos</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for jugador in historial %}
+            <tr>
+                <td>{{ jugador['nombre'] }}</td>
+                <td>{{ jugador['tiempo'] }}</td>
+                <td>{{ jugador['aciertos'] }}</td>
+                <td>{{ jugador['desaciertos']}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <form action="{{ url_for('inicio') }}" >
+        <input type="submit" value="Volver al inicio" class="btn">
+    </form>
+    <br><br>
+</body>
+</html>

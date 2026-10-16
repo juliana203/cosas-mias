@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/estilos.css">
+    <title>Verificacion</title>
+</head>
+<body>
+    <header>
+        <h1>Trivia de peliculas:</h1>        
+    </header>
+    <div class="container">
+        <img src=".\statics\grafico1.png" alt="Grafica aciertos/desaciertos por fecha">
+        <img src=".\statics\graficocircular.png" alt="Porcentaje aciertos/desaciertos">   
+    </div>
+    <form action="{{ url_for('inicio') }}" >
+        <input type="submit" value="Volver al inicio" class="btn">
+    </form>
+
+    <form action="{{ url_for('descargar') }}" >
+        <input type="submit" value="Descargar graficas en pdf" class="btn">
+    </form>
+
+</body>
+</html>
