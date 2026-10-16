@@ -1,0 +1,12 @@
+receptor = afest_tapa.pdbqt
+ligand = pcl_tri_plegado.pdbqt
+
+center_x = 2.593
+center_y = -4.735
+center_z = -3.227
+
+size_x = 26.0
+size_y = 26.0
+size_z = 26.0
+
+exhaustiveness = 8
