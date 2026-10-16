@@ -1,0 +1,3 @@
+trajin AhpE_100ns_md.nc
+closest 10 :198 outprefix aguas_cercanas
+trajout aguas_cercanas.nc

@@ -1,0 +1,5 @@
+PER = loadpdb peroxirredoxina_cristal.pdb
+solvateOct PER TIP3PBOX 9.0
+saveAmberParm PER peroxi_aguas.prmtop peroxi_aguas.rst7
+savepdb PER peroxi_aguas.pdb
+quit

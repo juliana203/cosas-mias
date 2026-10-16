@@ -1,0 +1,3 @@
+trajin AhpE_100ns_md.nc
+rms first out rmsdBackbone.dat :1-153@CA,C,N,O
+atomicfluct out rmsf.dat :1-153@C,CA,N,O byres

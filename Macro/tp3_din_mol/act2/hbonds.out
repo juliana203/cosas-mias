@@ -1,0 +1,75 @@
+
+CPPTRAJ: Trajectory Analysis. V6.24.0 (AmberTools)
+    ___  ___  ___  ___
+     | \/ | \/ | \/ | 
+    _|_/\_|_/\_|_/\_|_
+
+| Date/time: 05/20/26 17:58:04
+| Available memory: 3.268 GB
+
+	Reading 'peroxi_aguas_v2.prmtop' as Amber Topology
+	Radius Set: modified Bondi radii (mbondi)
+	This Amber topology does not include atomic numbers.
+	Assigning elements from atom masses/names.
+	No SCEE section: setting Amber default (1.2)
+	No SCNB section: setting Amber default (2.0)
+INPUT: Reading input from 'STDIN'
+  [trajin AhpE_100ns_md.nc]
+	Reading 'AhpE_100ns_md.nc' as Amber NetCDF
+Warning: NetCDF file time variable defined but empty. Disabling.
+  [hbond acceptormask :CYM@SG out CYM.out]
+  HBOND: Acceptor mask is :CYM@SG, donors will be searched for in a region specified by *
+	Distance cutoff = 3.000, Angle Cutoff = 135.000
+	Writing # Hbond v time results to CYM.out
+---------- RUN BEGIN -------------------------------------------------
+
+PARAMETER FILES (1 total):
+ 0: peroxi_aguas_v2.prmtop, 57306 atoms, 17842 res, box: Truncated octahedron, 17538 mol, 17536 solvent
+
+INPUT TRAJECTORIES (1 total):
+ 0: 'AhpE_100ns_md.nc' is a NetCDF (NetCDF3) AMBER trajectory with coordinates, box, Parm peroxi_aguas_v2.prmtop (Truncated octahedron box) (reading 200 of 200)
+  Coordinate processing will occur on 200 frames.
+
+BEGIN TRAJECTORY PROCESSING:
+.....................................................
+ACTION SETUP FOR PARM 'peroxi_aguas_v2.prmtop' (1 actions):
+  0: [hbond acceptormask :CYM@SG out CYM.out]
+	Acceptor-only atoms: 2
+	Donor/acceptor sites: 0
+	Donor-only sites: 428
+	512 solute hydrogens.
+	Estimated max potential memory usage: 0.648 kB
+----- AhpE_100ns_md.nc (1-200, 1) -----
+ 0% 10% 20% 30% 40% 50% 60% 70% 80% 90% 100% Complete.
+
+Read 200 frames and processed 200 frames.
+TIME: Avg. throughput= 358.4608 frames / second.
+
+ACTION OUTPUT:
+    HBOND: Actual memory usage is 0.656 kB
+	4 solute-solute hydrogen bonds.
+TIME: Analyses took 0.0000 seconds.
+
+DATASETS (1 total):
+	HB_00001[UU] "HB_00001[UU]" (integer), size is 200 (0.800 kB)
+    Total data set memory usage is at least 0.800 kB
+
+DATAFILES (1 total):
+  CYM.out (Standard Data File):  HB_00001[UU]
+
+RUN TIMING:
+TIME:		Init               : 0.0000 s (  0.01%)
+TIME:		Trajectory Process : 0.5579 s ( 99.40%)
+TIME:		Action Post        : 0.0001 s (  0.02%)
+TIME:		Analysis           : 0.0000 s (  0.00%)
+TIME:		Data File Write    : 0.0032 s (  0.56%)
+TIME:		Other              : 0.0000 s (  0.00%)
+TIME:	Run Total 0.5613 s
+---------- RUN END ---------------------------------------------------
+TIME: Total execution time: 0.7977 seconds.
+--------------------------------------------------------------------------------
+To cite CPPTRAJ use:
+Daniel R. Roe and Thomas E. Cheatham, III, "PTRAJ and CPPTRAJ: Software for
+  Processing and Analysis of Molecular Dynamics Trajectory Data". J. Chem.
+  Theory Comput., 2013, 9 (7), pp 3084-3095.
+

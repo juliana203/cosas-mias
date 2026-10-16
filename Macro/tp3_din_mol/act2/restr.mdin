@@ -1,0 +1,24 @@
+ &cntrl
+      ntx=5, irest=1,
+      ntwv=0, ntpr=1000, ntwx=10000, ntwe=1000,
+      ntb=1,
+      nstlim=10000000, dt=.002,
+      cut=10.0,
+      ntf=2, ntc=2,
+      ntt=1, ntp=0,
+      temp0=300.0, tautp=2.0,
+      nrespa=1,
+      ioutfm=1,
+      ig=-1,
+      nmropt=1,
+/
+&wt
+ type='DUMPFREQ', istep1=10,
+&end
+&wt
+ type="END",
+&end
+ DISANG=SO.rst
+ DUMPAVE=SO.dat
+END
+

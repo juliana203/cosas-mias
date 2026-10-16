@@ -1,0 +1,2 @@
+trajin AhpE_100ns_md.nc
+hbond acceptormask :CYM@SG out CYM.out

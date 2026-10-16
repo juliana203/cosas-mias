@@ -1,0 +1,7 @@
+parm98=loadAmberParams AOX.prm
+loadamberprep AOX.in
+p=loadpdb inicial_aox.pdb
+solvateOct p TIP3PBOX 0.000015 9
+saveAmberParm p con_aguaox.prmtop con_aguaox.rst7
+savepdb p con_aguaox_wat.pdb
+quit

@@ -1,0 +1,4 @@
+trajin AhpE_100ns_md.nc
+
+rms first out rmsdBackbone.dat :1-153@CA,C,N,O
+rms first out rmsdTotal.dat :1-153

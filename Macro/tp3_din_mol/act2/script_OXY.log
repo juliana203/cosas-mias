@@ -1,0 +1,12 @@
+source newtypes.log
+parm98 = loadAmberParams nuevosparamHEC.prm
+loadamberprep hemo_OXY.in
+p=loadpdb bacillus.pdb
+bond p.1.FE p.70.NE2
+solvateOct p TIP3PBOX 9.0
+saveAmberParm p bacillus_OXY.top bacillus_OXY.crd 
+savepdb p bacillus_OXY.pdb 
+quit
+
+
+

@@ -1,0 +1,22 @@
+
+ &cntrl
+	imin=0,
+	irest=0,
+	ntx=1,
+	ntb=1,
+	cut=9.0,
+	ntr=1,
+	ntc=2,
+	ntf=2,
+	tempi=0.0,
+	temp0=300.0,
+	ntt=3,
+	gamma_ln=1.0,
+	nstlim=1000,
+	dt=0.002,
+	ntpr=100,
+	ntwx=100,
+	ntwr=340,
+	restraintmask=':1-153',
+	restraint_wt=5.0,
+ &end

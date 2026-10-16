@@ -1,0 +1,25 @@
+#!/bin/bash -l
+#
+#$ -cwd
+#$ -j y
+#$ -S /bin/bash
+#
+
+
+cat <<eof > prueba.mdin
+
+ &cntrl
+        imin=1,irest=0,ntx=1,
+        ntb=2,iwrap=1,
+
+        ntp=1,pres0=1,taup=0.2,
+
+        MAXCYC=1000,NCYC=1000, 
+        NTC=2,NTF=2,tol=0.001,
+
+        cut = 9,
+
+ &end
+
+eof
+
