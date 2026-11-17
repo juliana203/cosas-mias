@@ -1,0 +1,9 @@
+{% extends "base.html" %}{% block contenido %}
+<h2>Posibles coincidencias</h2>
+<div class="aviso">Ya existe(n) experimento(s) del mismo tipo con los mismos datos. Podés continuar igual (se registra como un experimento nuevo, sin tocar el existente) o cancelar.</div>
+<table><tr><th>#</th><th>Autor</th><th>Fecha</th>{% for c in clave %}<th>{{ c }}</th>{% endfor %}<th>Estado</th></tr>
+{% for e in coincidencias %}<tr><td>{{ e.id }}</td><td>{{ e.autor }}</td><td>{{ e.fecha_realizacion }}</td>{% for c in clave %}<td>{{ e.valor_de(c) }}</td>{% endfor %}<td>{{ e.estado_validez }}</td></tr>{% endfor %}</table>
+{% macro ocultos() %}{% for nombre, valor in campos %}<input type="hidden" name="{{ nombre }}" value="{{ valor }}">{% endfor %}<input type="hidden" name="pdb_b64" value="{{ pdb_b64 }}">{% endmacro %}
+<form method="post" action="/registro/confirmar" style="display:inline">{{ ocultos() }}<button type="submit">Continuar de todos modos</button></form>
+<form method="post" action="/registro/cancelar" style="display:inline"><button type="submit">Cancelar el registro</button></form>
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "base.html" %}{% block contenido %}
+<h2>Registrar experimento</h2>
+{% if mensajes %}<div class="error"><strong>No se pudo registrar:</strong><ul>{% for m in mensajes %}<li>{{ m }}</li>{% endfor %}</ul></div>{% endif %}
+<form method="get" action="/registro"><label>Tipo de experimento *
+<select name="tipo" onchange="this.form.submit()">{% for t in tecnicas %}<option value="{{ t.tipo }}" {{ 'selected' if t.tipo == tecnica.tipo }}>{{ t.etiqueta }}</option>{% endfor %}</select></label></form>
+<form method="post" action="/registro" enctype="multipart/form-data">
+<input type="hidden" name="tipo" value="{{ tecnica.tipo }}">
+<label>Proyecto *<select name="proyecto_id">{% for id, nombre in proyectos %}<option value="{{ id }}" {{ 'selected' if form.get('proyecto_id') == id }}>{{ nombre }}</option>{% endfor %}</select></label>
+<label>Fecha de realización *<input type="date" name="fecha_realizacion" value="{{ form.get('fecha_realizacion', '') }}"></label>
+{% for d in tecnica.definiciones() %}
+<label>{{ d.etiqueta }}{{ ' *' if d.obligatorio }}{{ ' (' ~ d.unidad ~ ')' if d.unidad }}<input name="v_{{ d.nombre }}" value="{{ form.get('v_' ~ d.nombre, '') }}"></label>
+{% endfor %}
+<label>Similar a<select name="similar_a" multiple>{% for e in experimentos %}<option value="{{ e.id }}">#{{ e.id }} · {{ e.valor_de('proteina') }} / {{ e.valor_de('ligando') }}</option>{% endfor %}</select></label>
+<label>Hardware utilizado<input name="hardware" value="{{ form.get('hardware', '') }}"></label>
+<label>Tiempo de procesamiento<input name="tiempo_procesamiento" value="{{ form.get('tiempo_procesamiento', '') }}"></label>
+<label>Objetivo<input name="objetivo" value="{{ form.get('objetivo', '') }}"></label>
+<label>Hipótesis<textarea name="hipotesis">{{ form.get('hipotesis', '') }}</textarea></label>
+<label>Notas<textarea name="notas">{{ form.get('notas', '') }}</textarea></label>
+<label>Parámetros adicionales (nombre · valor · unidad)</label>
+{% for i in extras %}<div class="fila"><input name="extra_nombre_{{ i }}" placeholder="nombre"><input name="extra_valor_{{ i }}" placeholder="valor"><input name="extra_unidad_{{ i }}" placeholder="unidad"></div>{% endfor %}
+<label>Archivo PDB *<input type="file" name="pdb"></label>
+<button type="submit">Registrar</button></form>{% endblock %}

@@ -1,0 +1,7 @@
+{% extends "base.html" %}{% block contenido %}
+<div class="ok"><strong>Experimento registrado.</strong></div>
+<table><tr><th>#</th><td>{{ experimento.id }}</td></tr><tr><th>Autor</th><td>{{ experimento.autor }}</td></tr>
+<tr><th>Fecha y hora de carga</th><td>{{ experimento.fecha_hora.strftime('%d/%m/%Y %H:%M') }}</td></tr><tr><th>Tipo</th><td>{{ experimento.tipo }}</td></tr>
+{% for p in experimento.parametros %}<tr><th>{{ p.nombre }}</th><td>{{ p.valor }} {{ p.unidad or '' }}</td></tr>{% endfor %}
+<tr><th>Archivo PDB</th><td>{{ experimento.ruta_pdb }}</td></tr></table>
+<p><a href="/registro">Registrar otro</a></p>{% endblock %}
